@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체육대회 경기 일정</title>
+    <style>
+        :root {
+            --primary-color: #ff6b6b;
+            --secondary-color: #4dabf7;
+            --bg-color: #f8f9fa;
+            --text-color: #343a40;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 25px 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* 우리 반 전용 배너 스타일 */
+        .class-banner {
+            background-color: #fff3bf;
+            border-left: 5px solid #fab005;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .class-banner h2 {
+            font-size: 1.1rem;
+            color: #f08c00;
+            margin-bottom: 5px;
+        }
+
+        .class-banner p {
+            font-size: 0.9rem;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .schedule-item {
+            background-color: var(--card-bg);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .schedule-item.highlight {
+            border-left-color: var(--primary-color);
+            background-color: #fff5f5;
+        }
+
+        .time {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #868e96;
+        }
+
+        .content {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .location {
+            display: inline-block;
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #e9ecef;
+            color: #495057;
+            width: fit-content;
+            margin-top: 4px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #adb5bd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 상단 타이틀 -->
+        <header>
+            <h1>🎉 체육대회 경기 일정표</h1>
+            <p>다함께 즐기는 활기찬 하루!</p>
+        </header>
+
+        <!-- 우리 반 전용 요소 (이 부분만 수정해서 쓰시면 됩니다!) -->
+        <div class="class-banner">
+            <h2>🏆 우리 반 승전지 (3학년 O반)</h2>
+            <p>• 반 목표: 다치지 말고 1등 하기!<br>• 준비물: 개인 물통, 편한 복장, 응원도구<br>• 점심 메뉴: 다같이 맛있게 먹기!</p>
+        </div>
+
+        <!-- 타임라인 일정 -->
+        <div class="timeline">
+            <div class="schedule-item">
+                <span class="time">08:50 ~ 09:00</span>
+                <span class="content">각반 출석체크 및 운동장 집결 완료</span>
+                <span class="location">운동장</span>
+            </div>
+
+            <div class="schedule-item highlight">
+                <span class="time">09:00 ~ 09:20</span>
+                <span class="content">개회선언, 준비운동 후 이동</span>
+                <span class="location">전체 운동장 집결</span>
+            </div>
+
+            <div class="schedule-item">
+                <span class="time">10:20 ~ 10:30</span>
+                <span class="content">휴식시간 및 이동 (경기 전 보조준비운동 실시)</span>
+                <span class="location">이동 시간</span>
+            </div>
+
+            <div class="schedule-item">
+                <span class="time">10:30 ~ 11:30</span>
+                <span class="content">피구 경기 / 합동 챌린지 / 단체 경기</span>
+                <span class="location">체육관 / 각반교실 / 운동장</span>
+            </div>
+
+            <div class="schedule-item">
+                <span class="time">11:30 ~ 11:40</span>
+                <span class="content">휴식시간 및 이동 (경기 전 보조준비운동 실시)</span>
+                <span class="location">이동 시간</span>
+            </div>
+
+            <div class="schedule-item">
+                <span class="time">11:40 ~ 12:40</span>
+                <span class="content">협동 챌린지 / 단체 경기 / 피구 경기</span>
+                <span class="location">각반교실 / 운동장 / 체육관</span>
+            </div>
+
+            <div class="schedule-item highlight">
+                <span class="time">12:40 ~ 13:30</span>
+                <span class="content">점심시간 및 휴식시간 (학생자치회 스포츠부스 운영)</span>
+                <span class="location">체육관</span>
+            </div>
+
+            <div class="schedule-item highlight">
+                <span class="time">13:30 ~ 14:15</span>
+                <span class="content">축하공연(덕소중 댄스동아리), 학년별 단체 줄넘기, 이어달리기 결승, 시상 및 마무리</span>
+                <span class="location">전교생 운동장 집결</span>
+            </div>
+
+            <div class="schedule-item">
+                <span class="time">14:15 ~ 15:00</span>
+                <span class="content">교내정화활동 (봉사)</span>
+                <span class="location">학교 전역</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>Deokso Middle School Sports Day</p>
+        </footer>
+    </div>
+
+</body>
+</html>
